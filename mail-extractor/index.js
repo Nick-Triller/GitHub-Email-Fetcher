@@ -16,7 +16,6 @@ module.exports.getEmails = function getEmails(username, userAgent) {
 	
 	function end() {
 		counter++; if(counter === 2) em.emit('result', emails);
-		console.log('end', counter);
 	}
 	
 	var url1 = 'https://api.github.com/users/' + username + '/events/public';
