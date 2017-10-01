@@ -23,10 +23,12 @@ module.exports.getEmails = function getEmails(username, userAgent) {
 	
 	extractor.getEmails(url1)
 		.on('data', saveUniqueEmail)
+		.on('error', msg => em.emit('error', msg))
 		.on('end', end);
 		
 	extractor.getEmails(url2)
 		.on('data', saveUniqueEmail)
+		.on('error', msg => em.emit('error', msg))
 		.on('end', end);
 	
 	return em;
