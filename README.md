@@ -1,4 +1,4 @@
-﻿# GitHub Email Fetcher
+﻿﻿# GitHub Email Fetcher
 
 
 ## Description
@@ -13,6 +13,10 @@ The only dependency is [request](https://www.npmjs.com/package/request).
 
 ## Usage
 > node index.js \<Username> [\<UserAgent\>]
+
+or
+
+> npm run start \<Username> [\<UserAgent\>]
 
 The default user agent "GitHub-Email-Fetcher" is used when the user agent argument is omitted.
 
