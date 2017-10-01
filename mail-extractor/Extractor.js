@@ -25,6 +25,9 @@ function Extractor(userAgent) {
 			throw error;
 		}
 		body = JSON.parse(body);
+		if (response.statusCode != 200) {
+			that.em.emit('error', body.message);
+		}
 		traverse(body, handler);
 		that.em.emit('end');
 	}

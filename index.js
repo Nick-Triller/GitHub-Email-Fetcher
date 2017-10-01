@@ -18,4 +18,5 @@ mailExtractor.getEmails(username, userAgent)
 		result.forEach(function(element) {
 			console.log(element);
 		});	
-	});
+	})
+	.on('error', console.log);
